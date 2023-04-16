@@ -1,0 +1,32 @@
+---
+- name: Converge
+  hosts: all
+  tasks:
+    - name: "Include joenyland.sanoid"
+      include_role:
+        name: "joenyland.sanoid"
+      vars:
+        sanoid_templates:
+          tank:
+            autosnap: 'yes'
+            autoprune: 'yes'
+            frequently: 0
+            hourly: 0
+            daily: 30
+            monthly: 3
+            yearly: 0
+          none:
+            autosnap: 'no'
+            autoprune: 'no'
+            frequently: 0
+            hourly: 0
+            daily: 0
+            monthly: 0
+            yearly: 0
+        sanoid_policies:
+          tank:
+            use_template: tank
+            recursive: 'yes'
+          tank/downloads:
+            use_template: none
+            recursive: 'yes'

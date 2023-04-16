@@ -1,0 +1,11 @@
+---
+- name: Configure template {{ template.key }}
+  ini_file:
+    path: /etc/sanoid/sanoid.conf
+    section: template_{{ template.key }}
+    option: "{{ item.key }}"
+    value: "{{ item.value }}"
+    mode: '0644'
+  loop: "{{ template.value | dict2items }}"
+  loop_control:
+    label: "[template_{{ template.key }}] {{ item.key }} = {{ item.value }}"

@@ -1,0 +1,15 @@
+galaxy_info:
+  author: Joe Nyland
+  role_name: sanoid
+  namespace: joenyland
+  description: Installs and configures Sanoid.
+  license: MIT
+  min_ansible_version: '2.1'
+  platforms:
+  - name: Debian
+    versions:
+      - bullseye # 11 (stable)
+  galaxy_tags:
+    - sanoid
+    - zfs
+dependencies: []

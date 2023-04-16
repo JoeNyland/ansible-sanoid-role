@@ -1,0 +1,23 @@
+---
+- name: Setup Sanoid
+  tags: sanoid
+  become: true
+  block:
+    - name: Install
+      apt:
+        name: sanoid
+        update_cache: true
+
+    - name: Configure templates
+      include_tasks: templates.yml
+      loop: "{{ sanoid_templates | dict2items }}"
+      loop_control:
+        loop_var: template
+        label: template_{{ template.key }}
+
+    - name: Configure policies
+      include_tasks: policies.yml
+      loop: "{{ sanoid_policies | dict2items }}"
+      loop_control:
+        loop_var: policy
+        label: "{{ policy.key }}"
