@@ -1,0 +1,5 @@
+---
+roles:
+  - src: joenyland.zfs
+collections:
+  - community.general
