@@ -3,7 +3,7 @@ joenyland.sanoid
 
 [![CI](https://github.com/JoeNyland/ansible-sanoid-role/actions/workflows/ci.yml/badge.svg)](https://github.com/JoeNyland/ansible-sanoid-role/actions/workflows/ci.yml)
 
-Installs and configures Postfix.
+Installs and configures Sanoid.
 
 Requirements
 ------------
