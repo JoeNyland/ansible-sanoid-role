@@ -21,3 +21,11 @@
       loop_control:
         loop_var: policy
         label: "{{ policy.key }}"
+
+    - name: Create syncoid user
+      user:
+        name: syncoid
+        system: true
+        password_lock: true
+        home: /var/lib/syncoid
+        shell: /bin/bash
