@@ -1,5 +1,6 @@
 ---
 roles:
-  - src: joenyland.zfs
+  - name: joenyland.zfs
+    src: https://github.com/JoeNyland/ansible-zfs-role
 collections:
   - community.general
