@@ -24,7 +24,6 @@ jobs:
         image:
           - geerlingguy/docker-debian13-ansible # trixie (stable)
           - geerlingguy/docker-debian12-ansible # bookworm (oldstable)
-          - geerlingguy/docker-debian11-ansible # bullseye (oldoldstable)
     steps:
       - name: Checkout
         uses: actions/checkout@v2

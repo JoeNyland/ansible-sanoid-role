@@ -10,7 +10,6 @@ galaxy_info:
     versions:
       - trixie # 13 (stable)
       - bookworm # 12 (oldstable)
-      - bullseye # 11 (oldoldstable)
   galaxy_tags:
     - sanoid
     - zfs
