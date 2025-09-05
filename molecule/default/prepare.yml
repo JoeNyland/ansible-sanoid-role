@@ -1,0 +1,10 @@
+---
+- name: Prepare
+  hosts: all
+  tasks:
+    - name: Install contrib repo
+      apt_repository:
+        repo: deb http://deb.debian.org/debian {{ ansible_distribution_release }} contrib
+        state: present
+        filename: contrib
+        update_cache: true
