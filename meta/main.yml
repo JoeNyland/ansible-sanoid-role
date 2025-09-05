@@ -8,8 +8,9 @@ galaxy_info:
   platforms:
   - name: Debian
     versions:
-      - bookworm # 12 (stable)
-      - bullseye # 11 (oldstable)
+      - trixie # 13 (stable)
+      - bookworm # 12 (oldstable)
+      - bullseye # 11 (oldoldstable)
   galaxy_tags:
     - sanoid
     - zfs
